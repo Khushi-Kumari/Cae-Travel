@@ -1,0 +1,202 @@
+
+*{
+    border:0px;
+    margin:0px;
+}
+body{
+    overflow: hidden;
+}
+
+.cloud{
+    background:url('cloud.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    height: 100vh;
+    width: 100vw;
+    overflow-y:hidden;
+
+}
+
+.road{
+    
+    background: url(road.png);
+    background-size: 107vh;
+    position: absolute;
+    bottom: 0px;
+    width: 1000vw;
+    height: 74vh;
+    animation:carmove linear 8s infinite;
+
+}
+
+.trees {
+    background: url(trees.png) no-repeat center center/cover;
+    background-size: cover;
+    position: absolute;
+    bottom: -85px;
+    width: 100vw;
+    height: 173vh;
+}
+/* .car{
+    background: url('car.png') no-repeat;
+    background-size:30%;
+    height:50vh;
+    width:50vw;
+    position:absolute;
+
+} */
+/* .car {
+    border:2px solid red;
+    background: url('car.png') no-repeat;
+    background-size: 81%;
+    height: 50vh;
+    width: 50vw;
+    position: absolute;
+    bottom: -58px;
+    left: 36vw;
+} */
+
+
+
+/* .wheel1 {
+    border: 2px solid green;
+    height: 5vh;
+    width: auto;
+    position: absolute;
+    left: 6vw;
+    top: 32vh;
+} 
+.wheel2 {
+    border:2px solid green;
+    height: 34vh;
+    width:auto;
+    position:absolute;
+    left:30vw;
+    height:30vh;
+} */
+/* .wheel1 {
+    border: 2px solid green;
+    height: 5vh;
+    width: auto;
+    position: absolute;
+    left: 6vw;
+    top: 32vh;
+}
+.wheel2 {
+    border: 2px solid green;
+    height: 4vh;
+    width: auto;
+    position: absolute;
+    left: 29vw;
+    top: 32vh;
+}
+ */
+
+
+
+
+
+.car {
+    position:relative;
+    left:40%;
+    top: 438px;
+    animation:shake linear 2.5s infinite;
+} 
+#car_pic{
+    height:40%;
+     width:40%;
+}
+
+.w2 {
+    height: 44%;
+    width: 10%;
+    position: absolute;
+    left: 29vw;
+    top: 6vh;
+}
+
+.w2 img{
+    height:35px;
+    width:35px;
+    animation: wheelrotation linear .3s infinite;
+}
+.w1 {
+    height: 47%;
+    width: 10%;
+    position: absolute;
+    left: -12.9vw;
+    top: 2.7vh;
+}
+.w1 img {
+    
+    height: 211%;
+    width: 399%;
+    animation: wheelrotation linear .3s infinite;
+}
+.w2 {
+    
+    height: 40%;
+    width: 10%;
+    position: absolute;
+    left: 11.6vw;
+    top: 0.6vh;
+}
+.w2 img {
+    height: 276%;
+    width: 407%;
+}
+
+button{
+    height:35px;
+    width:48.5vw;
+    position:absolute;
+    
+}
+#button1{
+    left:1vw;
+    top:0px;
+}
+#button2{
+    right:1vw;
+    top:0px;
+}
+
+@keyframes wheelrotation{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes carmove{
+ 100%{
+     transform:translateX(-500vw);
+ }
+}
+@keyframes shake{
+0%{
+    transform:translateY(-5px);
+}
+50%{
+    transform:translateY(5px);
+}
+100%{
+    transform:translateY(-5px);
+}
+}
+
+
+@media screen and (min-height:1000px){
+    .car{
+        top:614px;
+    }
+}
+ @media screen and (max-width:450px){
+    .car{
+        top:518px;
+    }
+    .road{
+        animation:carmove linear 3s infinite;
+    }
+
+} 
